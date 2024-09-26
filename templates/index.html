@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projet</title>
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ObzZGglt9c3bkdf8pcnlVFuCvQKdr_cOkxYNGPWgndMDqRM4J79wpLyRZ6Y7ylbBlQwfdiYXlD4W91eh1UsIGppRy1P7wVpRN4LDl7XNEQ0nNk636c71IA0QUYWjGAij3SAOJnF3US_7z640PIftw8qwhqGRyWbkMQxmZrwC2gPj17lSOBLRkQ8p67rtp1IZvyEsViixfQg1qLd4ag7BZfmsuhWEDntWZh0tfQ1mDH07wLQuMz4DcR7GnLqi3C3jgbr5SircNcm3oEMhdzQi7K1wsXkZQpNP4T5ybxaVipHMtxoTujaJeDqPmyMy2HH_yHor94X2By9Ngdp2r6Z67A" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZmJzYnguY29tL3YvdDU5LjI3MDgtMjEvMjY1MDA5NTg0XzU5OTk2NDY0NDU2NzcyN18zMTg1MTYzODYzNTM0MDg3Mzg3X24uaHRtbC9tZWRpYy5odG1sP19uY19jYXQ9MTExJmNjYj0xLTUmX25jX3NpZD0wY2FiMTQmX25jX29oYz0xa3VPUVpvMnVLc0FYOXJleGJvJl9uY19odD1jZG4uZmJzYnguY29tJm9oPTA1Mzc4ZDc4NDlkZDI1YTU5ZmVkNDM3ZDIzYjg4NzExJm9lPTYxQUZENkU5JmRsPTE"/>
+<style type="text/css">
+body{
+background-image:url(https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Data_Mining_Techniques.jpg);
+}
+.required{
+	color:red;
+}
+.container {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin:2px 200px 2em 200px;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: rgb(250, 250, 250);
+}
+
+
+#name_project {
+  font-weight: 700;
+}
+
+.container {
+  width: 800px;
+  max-width: 95%;
+  margin:20px;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input > label {
+  text-align: start;
+}
+
+.input > input[type=number],input[type=text],select {
+  margin-top: 6px;
+  height: 28px !important;
+}
+
+/* From uiverse.io */
+.btn-pers {
+  position: relative;
+  left: 50%;
+  padding: 1em 2.5em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  transform: translateX(-50%);
+}
+
+.btn-pers:hover {
+  background-color: #198754;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translate(-50%, -7px);
+}
+
+.btn-pers:active {
+  transform: translate(-50%, -1px);
+}
+
+/*  */
+
+.alternative-option {
+  text-align: center;
+}
+
+.alternative-option > span {
+  color: #0d6efd;
+  cursor: pointer;
+}
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+.col-sm-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+    .col-sm-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+    .col-sm-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .row {
+  padding: 1em;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+</style>
+</head>
+<body>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <div class="container">
+    <form action="{{ url_for('predict') }}" method="POST" >
+        <img src="{{ url_for('static', filename='./templates/ligneTest3.png') }}" />
+      <h2 class="alternative-option">Projet Data Mining</h2>
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="input">
+                        <label>Year Of Observation <span class="required">*</span></label>
+                        <input type="number" class="form-control" min="2012" max="2016" name="YearOfObservation" placeholder="YearOfObservation.." />
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-12">
+                        <label>Insured Period<span class="required">*</span></label><br>
+                        <input type="Radio" name="Insured_Period" value="1" > 1 ans
+                        <input type="Radio" name="Insured_Period" value="0.5"> 6 mois
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-12">
+                        <label>Residential<span class="required">*</span></label><br>
+                        <input type="Radio" name="Residential" value="1" > Oui (1)
+                        <input type="Radio" name="Residential" value="0"> Non (0)
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-12">
+                        <label>Building Painted<span class="required">*</span></label><br>
+                        <input type="Radio" name="Building_Painted" value="N" > Oui (N)
+                        <input type="Radio" name="Building_Painted" value="V"> Non (V)
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-12">
+                        <label>Building Fenced<span class="required">*</span></label><br>
+                        <input type="Radio" name="Building_Fenced" value="N" > Oui (N)
+                        <input type="Radio" name="Building_Fenced" value="V"> Non (V)
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-12">
+                        <label>Garden<span class="required">*</span></label><br>
+                        <input type="Radio" name="Garden" value="V" > Oui (V)
+                        <input type="Radio" name="Garden" value="O"> Non (O)
+                </div>
+        </div>
+
+        <div class="row">
+                <div class="col-sm-12">
+                        <label>Settlement<span class="required">*</span></label><br>
+                        <input type="Radio" name="Settlement" value="R" > zone rurale (R)
+                        <input type="Radio" name="Settlement" value="U"> zone urbain (U)
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="input">
+                        <label>Building Dimension<span class="required">*</span></label>
+                        <input type="text" name="Building_Dimension" class="form-control" placeholder="Building Dimension.." />
+                    </div>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <label>Building Type<span class="required">*</span></label><br>
+                <input type="Radio" name="Building_Type" value="Fire_resistive" > Fire-resistive
+                <input type="Radio" name="Building_Type" value="Non_combustible"> Non-combustible
+                <input type="Radio" name="Building_Type" value="Ordinary" > Ordinary
+                <input type="Radio" name="Building_Type" value="Wood_framed"> Wood-framed
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="input">
+                        <label>Number Of Windows<span class="required">*</span></label>
+                        <input type="number" name="NumberOfWindows" class="form-control" min="0" max="10" placeholder="NumberOfWindows.." />
+                </div>
+            </div>
+        </div>
+          <button type="submit" id="register_button" class="mt-4 btn-pers">
+            Enregister
+          </button>
+    </form>
+  </div>
+    </div>
+</div>
+
+</body>
+</html>
